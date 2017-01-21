@@ -1,0 +1,42 @@
+# Project: RunningMan
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = 
+OBJ  = Main.o Collision.o Player.o Miscellaneous.o Maps.o $(RES)
+LINKOBJ  = Main.o Collision.o Player.o Miscellaneous.o Maps.o $(RES)
+LIBS =  -L"lib" -lalfont -lalleg -L"C:/Users/Kai/Google Drive/ICS3U/programs/Allegro/Running Man" -lalleg ../../../../../../../Dev-Cpp/lib/liballeg.a  -g3 
+INCS =  -I"include" 
+CXXINCS =  -I"lib/gcc/mingw32/3.4.2/include"  -I"include/c++/3.4.2/backward"  -I"include/c++/3.4.2/mingw32"  -I"include/c++/3.4.2"  -I"include" 
+BIN  = RunningMan.exe
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS)   -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before RunningMan.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "RunningMan.exe" $(LIBS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+Collision.o: Collision.cpp
+	$(CPP) -c Collision.cpp -o Collision.o $(CXXFLAGS)
+
+Player.o: Player.cpp
+	$(CPP) -c Player.cpp -o Player.o $(CXXFLAGS)
+
+Miscellaneous.o: Miscellaneous.cpp
+	$(CPP) -c Miscellaneous.cpp -o Miscellaneous.o $(CXXFLAGS)
+
+Maps.o: Maps.cpp
+	$(CPP) -c Maps.cpp -o Maps.o $(CXXFLAGS)

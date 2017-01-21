@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="RunningMan" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="RunningMan" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Linker>
+			<Add option="../../../../../../../Dev-Cpp/lib/liballeg.a" />
+			<Add library="alleg" />
+			<Add directory='&quot;C:/Users/Kai/Google Drive/ICS3U/programs/Allegro/Running Man&quot;' />
+		</Linker>
+		<Unit filename="Collision.cpp" />
+		<Unit filename="Main.cpp" />
+		<Unit filename="Maps.cpp" />
+		<Unit filename="Miscellaneous.cpp" />
+		<Unit filename="Player.cpp" />
+		<Unit filename="RunningMan.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
